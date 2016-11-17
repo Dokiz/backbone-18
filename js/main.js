@@ -15,7 +15,7 @@ $(function() {
 			''                 : 'index',
 			'page/:id/*simbo'  : 'page'
 			'search/:query'    : 'search'
-		    'default'          : 'default'
+		    '*other'          : 'default'
 		},
 		index: function(){
 			console.log('Всем привет');
@@ -28,8 +28,8 @@ $(function() {
 		search: function(query){
 			
 		},
-		default: function(){
-			alert('хмм....')
+		default: function(*){
+			alert('хмм....' +*);
 		}
 });
 new App.Router();
