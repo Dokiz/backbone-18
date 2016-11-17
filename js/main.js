@@ -13,13 +13,14 @@ $(function() {
     App.Router = Backbone.Router.extend({
 		routes: {
 			''                 : 'index',
-			'page/:id/sdgsdgs' : 'page'
+			'page/:id/*simbo' : 'page'
 		},
 		index: function(){
 			console.log('Всем привет');
 		},
-		page: function(id){
-			console.log('Это роут page' + id + '!!!');
+		page: function(id, simbo){
+			//console.log('Это роут page' + id + '!!!');
+			console.log(simbo);
 		}
 });
 new App.Router();
