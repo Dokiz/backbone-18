@@ -13,9 +13,9 @@ $(function() {
     App.Router = Backbone.Router.extend({
 		routes: {
 			''                 : 'index',
-			'page/:id/*simbo'  : 'page'
-			'search/:query'    : 'search'
-		    '*other'          : 'default'
+			'page/:id/*simbo'  : 'page',
+			'search/:query'    : 'search',
+		    '*other'           : 'default'
 		},
 		index: function(){
 			console.log('Всем привет');
@@ -28,8 +28,8 @@ $(function() {
 		search: function(query){
 			
 		},
-		default: function(*){
-			alert('хмм....' +*);
+		default: function(other){
+			alert('хмм....' + other);
 		}
 });
 new App.Router();
